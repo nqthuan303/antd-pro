@@ -162,7 +162,7 @@ export default class Register extends Component {
     const { count, prefix } = this.state;
     return (
       <div className={styles.main}>
-        <h3>注册</h3>
+        <h3>Register</h3>
         <Form onSubmit={this.handleSubmit}>
           <FormItem>
             {getFieldDecorator('mail', {
@@ -176,7 +176,7 @@ export default class Register extends Component {
                   message: '邮箱地址格式错误！',
                 },
               ],
-            })(<Input size="large" placeholder="邮箱" />)}
+            })(<Input size="large" placeholder="Email" />)}
           </FormItem>
           <FormItem help={this.state.help}>
             <Popover
@@ -199,7 +199,7 @@ export default class Register extends Component {
                     validator: this.checkPassword,
                   },
                 ],
-              })(<Input size="large" type="password" placeholder="至少6位密码，区分大小写" />)}
+              })(<Input size="large" type="password" placeholder="Password" />)}
             </Popover>
           </FormItem>
           <FormItem>
@@ -213,7 +213,7 @@ export default class Register extends Component {
                   validator: this.checkConfirm,
                 },
               ],
-            })(<Input size="large" type="password" placeholder="确认密码" />)}
+            })(<Input size="large" type="password" placeholder="Re-type Password" />)}
           </FormItem>
           <FormItem>
             <InputGroup compact>
@@ -237,7 +237,7 @@ export default class Register extends Component {
                     message: '手机号格式错误！',
                   },
                 ],
-              })(<Input size="large" style={{ width: '80%' }} placeholder="11位手机号" />)}
+              })(<Input size="large" style={{ width: '80%' }} placeholder="Phone number" />)}
             </InputGroup>
           </FormItem>
           <FormItem>
@@ -250,7 +250,7 @@ export default class Register extends Component {
                       message: '请输入验证码！',
                     },
                   ],
-                })(<Input size="large" placeholder="验证码" />)}
+                })(<Input size="large" placeholder="Captcha" />)}
               </Col>
               <Col span={8}>
                 <Button
@@ -259,7 +259,7 @@ export default class Register extends Component {
                   className={styles.getCaptcha}
                   onClick={this.onGetCaptcha}
                 >
-                  {count ? `${count} s` : '获取验证码'}
+                  {count ? `${count} s` : 'Get Captcha'}
                 </Button>
               </Col>
             </Row>
@@ -272,10 +272,10 @@ export default class Register extends Component {
               type="primary"
               htmlType="submit"
             >
-              注册
+              Save
             </Button>
             <Link className={styles.login} to="/user/login">
-              使用已有账户登录
+              Login
             </Link>
           </FormItem>
         </Form>
