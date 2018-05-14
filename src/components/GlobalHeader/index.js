@@ -100,7 +100,7 @@ export default class GlobalHeader extends PureComponent {
         <div className={styles.right}>
           <HeaderSearch
             className={`${styles.action} ${styles.search}`}
-            placeholder="站内搜索"
+            placeholder="Search"
             dataSource={['搜索提示一', '搜索提示二', '搜索提示三']}
             onSearch={value => {
               console.log('input', value); // eslint-disable-line
@@ -109,10 +109,10 @@ export default class GlobalHeader extends PureComponent {
               console.log('enter', value); // eslint-disable-line
             }}
           />
-          <Tooltip title="使用文档">
+          <Tooltip title="Get helps">
             <a
               target="_blank"
-              href="http://pro.ant.design/docs/getting-started"
+              href="https://github.com/nqthuan303/antd-pro"
               rel="noopener noreferrer"
               className={styles.action}
             >
@@ -132,20 +132,20 @@ export default class GlobalHeader extends PureComponent {
           >
             <NoticeIcon.Tab
               list={noticeData['通知']}
-              title="通知"
-              emptyText="你已查看所有通知"
+              title="Tab 1"
+              emptyText="No data"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg"
             />
             <NoticeIcon.Tab
               list={noticeData['消息']}
-              title="消息"
-              emptyText="您已读完所有消息"
+              title="Tab 2"
+              emptyText="No data"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg"
             />
             <NoticeIcon.Tab
               list={noticeData['待办']}
-              title="待办"
-              emptyText="你已完成所有待办"
+              title="Tab 3"
+              emptyText="No data"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/HsIsxMZiWKrNUavQUXqx.svg"
             />
           </NoticeIcon>
